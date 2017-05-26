@@ -16,12 +16,12 @@ def AddExtraLayers(net, use_batchnorm=True, lr_mult=1):
 
     # Add additional convolutional layers.
     # 19 x 19
-    from_layer = net.keys()[-1] #the last layer
+    from_layer = net.keys()[-1]
 
     # TODO(weiliu89): Construct the name using the last layer to avoid duplication.
     # 10 x 10
     out_layer = "conv6_1"
-    ConvBNLayer(net, from_layer, out_layer, use_batchnorm, use_relu, 256, 1, 0, 1, #output size; kernel_size; padding; stride
+    ConvBNLayer(net, from_layer, out_layer, use_batchnorm, use_relu, 256, 1, 0, 1,
         lr_mult=lr_mult)
 
     from_layer = out_layer
@@ -68,17 +68,17 @@ def AddExtraLayers(net, use_batchnorm=True, lr_mult=1):
 ### Modify the following parameters accordingly ###
 # The directory which contains the caffe code.
 # We assume you are running the script at the CAFFE_ROOT.
-caffe_root = os.environ['CAFFE_ROOT']
+caffe_root = os.getcwd()
 
 # Set true if you want to start training right after generating all files.
 run_soon = True
 # Set true if you want to load from most recently saved snapshot.
-# Otherwise, we will load from the pretrain_model defined below. ###
+# Otherwise, we will load from the pretrain_model defined below.
 resume_training = True
 # If true, Remove old model files.
 remove_old_models = False
 
-# The database file for training data. Created by data/VOC0712/create_data.sh ### todo: data format
+# The database file for training data. Created by data/VOC0712/create_data.sh
 train_data = "examples/VOC0712/VOC0712_trainval_lmdb"
 # The database file for testing data. Created by data/VOC0712/create_data.sh
 test_data = "examples/VOC0712/VOC0712_test_lmdb"
@@ -221,7 +221,7 @@ test_transform_param = {
         }
 
 # If true, use batch norm for all newly added layers.
-# Currently only the non batch norm version has been tested. ### todo: use normalization
+# Currently only the non batch norm version has been tested.
 use_batchnorm = False
 lr_mult = 1
 # Use different initial learning rate.
@@ -248,14 +248,12 @@ output_result_dir = "{}/data/VOCdevkit/results/VOC2007/{}/Main".format(os.enviro
 # model definition files.
 train_net_file = "{}/train.prototxt".format(save_dir)
 test_net_file = "{}/test.prototxt".format(save_dir)
-deploy_net_file = "{}/deploy.prototxt".format(save_dir) ###todo deploy to do what?
+deploy_net_file = "{}/deploy.prototxt".format(save_dir)
 solver_file = "{}/solver.prototxt".format(save_dir)
 # snapshot prefix.
 snapshot_prefix = "{}/{}".format(snapshot_dir, model_name)
 # job script path.
 job_file = "{}/{}.sh".format(job_dir, model_name)
-
-###todo following items need to be modified
 
 # Stores the test image names and sizes. Created by data/VOC0712/create_list.sh
 name_size_file = "data/VOC0712/test_name_size.txt"
@@ -266,7 +264,7 @@ label_map_file = "data/VOC0712/labelmap_voc.prototxt"
 
 # MultiBoxLoss parameters.
 num_classes = 21
-share_location = True ### overlapped?
+share_location = True
 background_label_id=0
 train_on_diff_gt = True
 normalization_mode = P.Loss.VALID

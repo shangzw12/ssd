@@ -21,6 +21,12 @@ def AddExtraLayers(net, use_batchnorm=True, lr_mult=1):
     # TODO(weiliu89): Construct the name using the last layer to avoid duplication.
     # 10 x 10
     out_layer = "conv6_1"
+    
+    #ConvBNLayer(net, from_layer, out_layer, use_bn, use_relu, num_output,
+    #kernel_size, pad, stride, use_scale=True, eps=0.001, conv_prefix='', conv_postfix='',
+    #bn_prefix='', bn_postfix='_bn', scale_prefix='', scale_postfix='_scale',
+    #bias_prefix='', bias_postfix='_bias'):
+
     ConvBNLayer(net, from_layer, out_layer, use_batchnorm, use_relu, 256, 1, 0, 1,
         lr_mult=lr_mult)
 
@@ -62,7 +68,7 @@ def AddExtraLayers(net, use_batchnorm=True, lr_mult=1):
     ConvBNLayer(net, from_layer, out_layer, use_batchnorm, use_relu, 256, 3, 0, 1,
       lr_mult=lr_mult)
 
-    return net
+    return net  
 
 
 ### Modify the following parameters accordingly ###
@@ -71,7 +77,7 @@ def AddExtraLayers(net, use_batchnorm=True, lr_mult=1):
 # only supports testing for classification problem now.
 # The directory which contains the caffe code.
 # We assume you are running the script at the CAFFE_ROOT.
-caffe_root = os.getcwd()
+caffe_root = os.environ['CAFFE_ROOT']
 
 # Set true if you want to start training right after generating all files.
 run_soon = True
