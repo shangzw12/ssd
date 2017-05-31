@@ -1,0 +1,5 @@
+create_list.sh should be run in his local dir
+create_data.sh should be run in ../../ i.e. ssd's branch's caffe root
+So when running create_data.sh people should export PYTHONPATH=$(pwd)/python
+in order to make use of its caffe python lib
+
