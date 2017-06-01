@@ -381,10 +381,10 @@ test_iter = int(math.ceil(float(num_test_image) / test_batch_size))
 
 solver_param = {
     # Train parameters
-    'base_lr': 0.000000025,
+    'base_lr': 0.000025,
     'weight_decay': 0.0005,
     'lr_policy': "multistep",
-    'stepvalue': [20000, 22000, 25000], # drop the learning rate every XXK iterations
+    'stepvalue': [80000, 100000, 120000], # drop the learning rate every XXK iterations
     'gamma': 0.1,
     'momentum': 0.9,
     'iter_size': iter_size,
