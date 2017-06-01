@@ -46,7 +46,7 @@ layer {
   }
   data_param {
     source: "examples/tbs_300x300_HSIL_10x/tbs_300x300_HSIL_10x_trainval_lmdb"
-    batch_size: 32
+    batch_size: 35
     backend: LMDB
   }
   annotated_data_param {

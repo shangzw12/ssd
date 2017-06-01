@@ -2,7 +2,7 @@ train_net: "models/VGGNet/tbs/SSD_300x300/train.prototxt"
 test_net: "models/VGGNet/tbs/SSD_300x300/test.prototxt"
 test_iter: 25
 test_interval: 100
-base_lr: 2.49999993684e-05
+base_lr: 2.49999993684e-06
 display: 10
 max_iter: 200000
 lr_policy: "multistep"
