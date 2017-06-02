@@ -11,3 +11,5 @@ I0602 17:26:06.158447  9984 solver.cpp:546]     Test net output #0: detection_ev
 I0602 17:28:59.310964  9984 solver.cpp:546]     Test net output #0: detection_eval = 0.7001
 I0602 17:31:55.683107  9984 solver.cpp:546]     Test net output #0: detection_eval = 0.725589
 I0602 17:34:49.035938  9984 solver.cpp:546]     Test net output #0: detection_eval = 0.702326
+I0602 17:37:44.138339  9984 solver.cpp:546]     Test net output #0: detection_eval = 0.742637
+I0602 17:40:40.028533  9984 solver.cpp:546]     Test net output #0: detection_eval = 0.679746
