@@ -275,7 +275,7 @@ name_size_file = "data/VOC0712/test_name_size.txt"
 # The pretrained model. We use the Fully convolutional reduced (atrous) VGGNet.
 pretrain_model = "models/VGGNet/VGG_ILSVRC_16_layers_fc_reduced.caffemodel"
 # Stores LabelMapItem.
-label_map_file = "data/tbs_300x300_HSIL_10x/labelmap_tbs.prototxt"
+label_map_file = "data/tbs_300x300_HSIL_10x/labelmap_voc.prototxt"
 
 # MultiBoxLoss parameters.
 ## most important one to adapt current model to various tasks
@@ -351,8 +351,8 @@ gpulist = gpus.split(",")
 num_gpus = len(gpulist)
 
 # Divide the mini-batch to different GPUs.
-batch_size = 35
-accum_batch_size = 35
+batch_size = 32
+accum_batch_size = 32
 iter_size = accum_batch_size / batch_size
 solver_mode = P.Solver.CPU
 device_id = 0
@@ -381,10 +381,10 @@ test_iter = int(math.ceil(float(num_test_image) / test_batch_size))
 
 solver_param = {
     # Train parameters
-    'base_lr': 0.0000025,
+    'base_lr': 0.00025,
     'weight_decay': 0.0005,
     'lr_policy': "multistep",
-    'stepvalue': [80000, 100000, 120000], # drop the learning rate every XXK iterations
+    'stepvalue': [180000, 200000, 220000], # drop the learning rate every XXK iterations
     'gamma': 0.1,
     'momentum': 0.9,
     'iter_size': iter_size,
@@ -399,7 +399,7 @@ solver_param = {
     'snapshot_after_train': True,
     # Test parameters
     'test_iter': [test_iter],
-    'test_interval': 100,
+    'test_interval': 200,
     'eval_type': "detection",
     'ap_version': "11point",
     'test_initialization': False,

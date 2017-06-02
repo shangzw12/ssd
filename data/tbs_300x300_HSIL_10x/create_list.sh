@@ -13,9 +13,9 @@ tmp_file=$bash_dir/tmp.txt
 #all lines except first 100 are used to train
 tmp_file_name=$bash_dir/tmp_file_name.txt
 ls $img_dir | sort > $tmp_file_name
-cat $tmp_file_name | tail -n +101 | cut -d . -f 1 > $train_file_name
+cat $tmp_file_name | tail -n +270 | cut -d . -f 1 > $train_file_name
 cat $train_file_name > $tmp_train_file_name
-cat $tmp_file_name | head -n 100 | cut -d . -f 1 > $test_file_name
+cat $tmp_file_name | head -n 270 | cut -d . -f 1 > $test_file_name
 cat $test_file_name > $tmp_test_file_name
 
 #append dir name in front of file name(each line)

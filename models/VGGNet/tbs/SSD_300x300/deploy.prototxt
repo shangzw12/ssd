@@ -1617,7 +1617,7 @@ layer {
       output_directory: "/home/shangzw/data/tbs/results/tbs/SSD_300x300/Main"
       output_name_prefix: "comp4_det_test_"
       output_format: "VOC"
-      label_map_file: "data/tbs_300x300_HSIL_10x/labelmap_tbs.prototxt"
+      label_map_file: "data/tbs_300x300_HSIL_10x/labelmap_voc.prototxt"
       name_size_file: "data/VOC0712/test_name_size.txt"
       num_test_image: 100
     }
