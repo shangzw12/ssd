@@ -77,9 +77,9 @@ caffe_root = os.getcwd()
 run_soon = True
 
 # The database file for training data. Created by data/VOC0712/create_data.sh
-train_data = "examples/VOC0712/VOC0712_trainval_lmdb"
+train_data = "examples/tbs_300x300_HSIL_10x/tbs_300x300_HSIL_10x_trainval_lmdb"
 # The database file for testing data. Created by data/VOC0712/create_data.sh
-test_data = "examples/VOC0712/VOC0712_test_lmdb"
+test_data = "examples/tbs_300x300_HSIL_10x/tbs_300x300_HSIL_10x_test_lmdb"
 # Specify the batch sampler.
 resize_width = 300
 resize_height = 300
@@ -232,16 +232,16 @@ else:
 # The job name should be same as the name used in examples/ssd/ssd_pascal.py.
 job_name = "SSD_{}".format(resize)
 # The name of the model. Modify it if you want.
-model_name = "VGG_VOC0712_{}".format(job_name)
+model_name = "VGG_tbs_300x300_HSIL_10x_{}".format(job_name)
 
 # Directory which stores the model .prototxt file.
-save_dir = "models/VGGNet/VOC0712/{}_score".format(job_name)
+save_dir = "models/VGGNet/tbs/{}_score".format(job_name)
 # Directory which stores the snapshot of trained models.
-snapshot_dir = "models/VGGNet/VOC0712/{}".format(job_name)
+snapshot_dir = "models/VGGNet/tbs/{}".format(job_name)
 # Directory which stores the job script and log file.
-job_dir = "jobs/VGGNet/VOC0712/{}_score".format(job_name)
+job_dir = "jobs/VGGNet/tbs/{}_score".format(job_name)
 # Directory which stores the detection results.
-output_result_dir = "{}/data/VOCdevkit/results/VOC2007/{}_score/Main".format(os.environ['HOME'], job_name)
+output_result_dir = "{}/data/tbs/results/tbs/{}_score/Main".format(os.environ['HOME'], job_name)
 
 # model definition files.
 train_net_file = "{}/train.prototxt".format(save_dir)
@@ -267,11 +267,11 @@ if max_iter == 0:
   sys.exit()
 
 # Stores the test image names and sizes. Created by data/VOC0712/create_list.sh
-name_size_file = "data/VOC0712/test_name_size.txt"
+name_size_file = "data/tbs_300x300_HSIL_10x/test_name_size.txt"
 # The resume model.
 pretrain_model = "{}_iter_{}.caffemodel".format(snapshot_prefix, max_iter)
 # Stores LabelMapItem.
-label_map_file = "data/VOC0712/labelmap_voc.prototxt"
+label_map_file = "data/tbs_300x300_HSIL_10x/labelmap_voc.prototxt"
 
 # MultiBoxLoss parameters.
 num_classes = 21

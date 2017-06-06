@@ -74,7 +74,7 @@ caffe_root = os.getcwd()
 run_soon = True
 # Set true if you want to load from most recently saved snapshot.
 # Otherwise, we will load from the pretrain_model defined below.
-resume_training = True  ##resume from the lastest snapshot if true, or resume from the pretrain
+resume_training = False  ##resume from the lastest snapshot if true, or resume from the pretrain
                         ## VGG model, but the rest parameters are set to be random to be trained
 # If true, Remove old model files.
 remove_old_models = False
@@ -271,7 +271,7 @@ snapshot_prefix = "{}/{}".format(snapshot_dir, model_name)
 job_file = "{}/{}.sh".format(job_dir, model_name)
 
 # Stores the test image names and sizes. Created by data/VOC0712/create_list.sh
-name_size_file = "data/VOC0712/test_name_size.txt"
+name_size_file = "data/tbs_300x300_HSIL_10x/test_name_size"
 # The pretrained model. We use the Fully convolutional reduced (atrous) VGGNet.
 pretrain_model = "models/VGGNet/VGG_ILSVRC_16_layers_fc_reduced.caffemodel"
 # Stores LabelMapItem.
