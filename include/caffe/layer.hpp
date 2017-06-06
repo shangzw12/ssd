@@ -68,6 +68,7 @@ class Layer {
       const vector<Blob<Dtype>*>& top) {
     InitMutex();
     CheckBlobCounts(bottom, top);
+    
     LayerSetUp(bottom, top);
     Reshape(bottom, top);
     SetLossWeights(top);
