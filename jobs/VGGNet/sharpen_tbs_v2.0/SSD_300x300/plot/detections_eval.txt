@@ -1,0 +1,17 @@
+I0608 12:23:51.714252 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.242669
+I0608 12:27:18.008244 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.599588
+I0608 12:30:46.526126 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.669598
+I0608 12:34:11.972820 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.738998
+I0608 12:37:40.927726 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.769288
+I0608 12:41:05.499516 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.817438
+I0608 12:44:36.955713 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.764579
+I0608 12:48:04.344693 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.785249
+I0608 12:51:30.218420 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.770506
+I0608 12:54:58.633801 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.840459
+I0608 12:58:25.320940 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.828719
+I0608 13:01:50.404144 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.837321
+I0608 13:05:14.427788 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.820743
+I0608 13:08:39.460517 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.833011
+I0608 13:12:11.171561 30581 solver.cpp:546]     Test net output #0: detection_eval = 0.809403
+I0608 14:21:04.130877  3354 solver.cpp:546]     Test net output #0: detection_eval = 0.807606
+I0608 14:24:37.751863  3354 solver.cpp:546]     Test net output #0: detection_eval = 0.849239

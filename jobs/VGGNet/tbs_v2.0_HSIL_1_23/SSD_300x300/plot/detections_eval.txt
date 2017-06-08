@@ -1,0 +1,5 @@
+I0607 14:28:52.275220 13659 solver.cpp:546]     Test net output #0: detection_eval = 0.443741
+I0607 14:32:12.759757 13659 solver.cpp:546]     Test net output #0: detection_eval = 0.563286
+I0607 14:35:31.134532 13659 solver.cpp:546]     Test net output #0: detection_eval = 0.698433
+I0607 14:38:57.614686 13659 solver.cpp:546]     Test net output #0: detection_eval = 0.671076
+I0607 14:42:19.526183 13659 solver.cpp:546]     Test net output #0: detection_eval = 0.752563
