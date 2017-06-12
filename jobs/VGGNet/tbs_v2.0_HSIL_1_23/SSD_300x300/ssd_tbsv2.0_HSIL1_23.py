@@ -74,7 +74,7 @@ caffe_root = os.getcwd()
 run_soon = True
 # Set true if you want to load from most recently saved snapshot.
 # Otherwise, we will load from the pretrain_model defined below.
-resume_training = False  ##resume from the lastest snapshot if true, or resume from the pretrain
+resume_training = True  ##resume from the lastest snapshot if true, or resume from the pretrain
                         ## VGG model, but the rest parameters are set to be random to be trained
 # If true, Remove old model files.
 remove_old_models = False
@@ -373,8 +373,8 @@ elif normalization_mode == P.Loss.FULL:
   base_lr *= 2000.
 
 # Evaluate on whole test set.
-num_test_image = 100
-test_batch_size = 4
+num_test_image = 200
+test_batch_size = 8
 # Ideally test_batch_size should be divisible by num_test_image,
 # otherwise mAP will be slightly off the true value.
 test_iter = int(math.ceil(float(num_test_image) / test_batch_size))
@@ -399,7 +399,7 @@ solver_param = {
     'snapshot_after_train': True,
     # Test parameters
     'test_iter': [test_iter],
-    'test_interval': 200,
+    'test_interval': 1000,
     'eval_type': "detection",
     'ap_version': "11point",
     'test_initialization': False,

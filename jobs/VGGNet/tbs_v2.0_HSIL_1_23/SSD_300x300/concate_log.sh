@@ -1,5 +1,6 @@
 prefix='VGG_tbs_300x300_HSIL_10x_SSD_300x300_'
 head=$1
+caffe_root=$CAFFE_ROOT
 tmp_file_name='tmp_file_name.txt'
 tmp_fname_2='tmp_file_name_2.txt'
 cont_fname='cont_file.txt'

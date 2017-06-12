@@ -68,7 +68,7 @@ class Layer {
       const vector<Blob<Dtype>*>& top) {
     InitMutex();
     CheckBlobCounts(bottom, top);
-    
+    LOG_IF(INFO, Caffe::root_solver());
     LayerSetUp(bottom, top);
     Reshape(bottom, top);
     SetLossWeights(top);

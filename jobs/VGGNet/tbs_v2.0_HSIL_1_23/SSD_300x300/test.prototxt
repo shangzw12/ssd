@@ -21,7 +21,7 @@ layer {
   }
   data_param {
     source: "examples/tbs_v2.0_HSIL_1_23/tbs_v2.0_HSIL_1_23_test_lmdb"
-    batch_size: 4
+    batch_size: 8
     backend: LMDB
   }
   annotated_data_param {
@@ -1638,12 +1638,12 @@ layer {
       top_k: 400
     }
     save_output_param {
-      output_directory: "/home/shangzw/data/tbs_v2.0_HSIL_1_23/results/SSD_300x300/Main"
+      output_directory: "/home/deepcare/data/tbs_v2.0_HSIL_1_23/results/SSD_300x300/Main"
       output_name_prefix: "comp4_det_test_"
       output_format: "VOC"
       label_map_file: "data/tbs_v2.0_HSIL_1_23/labelmap_voc.prototxt"
       name_size_file: "data/tbs_v2.0_HSIL_1_23/test_name_size"
-      num_test_image: 100
+      num_test_image: 200
     }
     code_type: CENTER_SIZE
     keep_top_k: 200
